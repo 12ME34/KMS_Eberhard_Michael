@@ -1,0 +1,13 @@
+﻿<Window x:Class="KMS_Eberhard_Michael.CustomerAccounts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KMS_Eberhard_Michael"
+        mc:Ignorable="d"
+        Title="CustomerAccounts" Height="450" Width="450">
+    <Grid>
+        <Label Content="Customer number: Customer name" HorizontalAlignment="Left" Margin="73,63,0,0" VerticalAlignment="Top" Height="36" Width="311"/>
+
+    </Grid>
+</Window>
