@@ -12,7 +12,9 @@ namespace KMS_Eberhard_Michael
     public class Customers
     {
 
+
         public static List<Customers> customers = new List<Customers>();
+
 
         public Customers(string id, string name)
         {
@@ -34,24 +36,26 @@ namespace KMS_Eberhard_Michael
 
             List<string> allCustomerData = File.ReadAllLines(totalFilePath).Skip(1).ToList();
             sr.Close();
+            
 
-            //BindingSource bs = new BindingSource();
-            //bs.DataSource = customers;
 
+            MainWindow mainWindow = new MainWindow();
 
             foreach (string file in allCustomerData)
             {
 
                 string[] entries = file.Split(',');
-                
-
                 customers.Add(new Customers(entries[0], entries[1]));
-
-
-
 
             }
 
+            foreach (var cust in customers)
+            {
+                string[] person = {cust.Id, cust.Name};
+                
+                mainWindow.listViewMain.Items.Add(person);
+            }
+            //mainWindow.listViewMain.ItemsSource = customers;
 
 
         }

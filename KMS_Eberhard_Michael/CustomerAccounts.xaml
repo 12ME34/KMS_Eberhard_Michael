@@ -7,7 +7,17 @@
         mc:Ignorable="d"
         Title="CustomerAccounts" Height="450" Width="450">
     <Grid>
-        <Label Content="Customer number: Customer name" HorizontalAlignment="Left" Margin="73,63,0,0" VerticalAlignment="Top" Height="36" Width="311"/>
+        <Label Content="Customer number: " HorizontalAlignment="Left" Margin="73,63,0,0" VerticalAlignment="Top" Height="36" Width="311"/>
+        <Label Content="Customer name: " HorizontalAlignment="Left" Margin="73,104,0,0" VerticalAlignment="Top" Height="36" Width="311"/>
+        <ListView HorizontalAlignment="Left" Height="136" Margin="53,190,0,0" VerticalAlignment="Top" Width="331" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="CustomerID" Header="Customer ID" Width="150" />
+                    <GridViewColumn x:Name="Orders" Header="Orders" Width="80" />
+                    <GridViewColumn x:Name="Amount" Header="Amount" Width="80" />
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>

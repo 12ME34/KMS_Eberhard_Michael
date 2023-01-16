@@ -23,30 +23,29 @@ namespace KMS_Eberhard_Michael
     public partial class MainWindow : Window
     {
         
-
-
-
         public MainWindow()
         {
             InitializeComponent();
-            listViewMain.ItemsSource = Customers.customers;
             
+        
+            btnLoadDetailsMain.IsEnabled = false;
+            
+                   
+
         }
 
         
         private void btnLoadDataMain_Click(object sender, RoutedEventArgs e)
         {
-
             LoadData.LoadDataFromFolder();
-
-
-            //foreach (var item in Customers.customers)
-
-            //    listViewMain.Items.Add(item.Id + item.Name);
-
+            
+            btnLoadDetailsMain.IsEnabled = true;
+            
         }
 
-
-        
+        private void btnLoadDetailsMain_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

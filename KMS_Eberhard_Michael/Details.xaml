@@ -14,7 +14,7 @@
                     <GridViewColumn Header="Recipient"/>
                     <GridViewColumn Header="Purpose"/>
                     <GridViewColumn Header="Date"/>
-                    <GridViewColumn Header="Amount"/>                    
+                    <GridViewColumn Header="Amount"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -28,8 +28,18 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Receive" HorizontalAlignment="Left" Height="40" Margin="75,317,0,0" VerticalAlignment="Top" Width="475"/>
-        <Label Content="Send" HorizontalAlignment="Left" Height="40" Margin="75,80,0,0" VerticalAlignment="Top" Width="475"/>
+        <Label Content="Receive" HorizontalAlignment="Left" Height="40" Margin="75,317,0,0" VerticalAlignment="Top" Width="377"/>
+        <Label Content="Send" HorizontalAlignment="Left" Height="43" Margin="75,80,0,0" VerticalAlignment="Top" Width="377"/>
+        <Label Content="Total received" HorizontalAlignment="Left" 
+               Height="36" Margin="541,357,0,0" 
+               VerticalAlignment="Top" Width="198"
+               VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <Label Content="Total send" HorizontalAlignment="Left" 
+               Height="36" Margin="541,393,0,0" VerticalAlignment="Top" 
+               Width="198" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <Label Content="Total" HorizontalAlignment="Left" Height="36" 
+               Margin="541,429,0,0" VerticalAlignment="Top" Width="198"
+               VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
 
     </Grid>
 </Window>

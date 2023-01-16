@@ -13,11 +13,11 @@
                FontSize="36" FontWeight="Bold"/>
         
         <Button x:Name="btnLoadDataMain" Content="Load Data" HorizontalAlignment="Left" Margin="400,200,0,0" VerticalAlignment="Top" Height="40" Width="125" Click="btnLoadDataMain_Click"/>
-        <Button x:Name="btnLoadDetailsMain" Content="Details" HorizontalAlignment="Left" Margin="400,300,0,0" VerticalAlignment="Top" Height="40" Width="125"/>
+        <Button x:Name="btnLoadDetailsMain" Content="Details" HorizontalAlignment="Left" Margin="400,300,0,0" VerticalAlignment="Top" Height="40" Width="125" Click="btnLoadDetailsMain_Click"/>
         <ListView x:Name="listViewMain" HorizontalAlignment="Left" Height="380" Margin="38,200,0,0" VerticalAlignment="Top" Width="238" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn x:Name="CustomerID" Header="Customer ID" Width="100" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn x:Name="Id" Header="Id" Width="100" DisplayMemberBinding="{Binding Id}" />
                     <GridViewColumn x:Name="Name" Header="Name" Width="150"  DisplayMemberBinding="{Binding Name}"/>
                 </GridView>
             </ListView.View>

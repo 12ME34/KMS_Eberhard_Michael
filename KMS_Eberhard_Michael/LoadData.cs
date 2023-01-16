@@ -17,8 +17,9 @@ namespace KMS_Eberhard_Michael
             fbd.ShowDialog();
             string filePath=fbd.SelectedPath;
             Customers.LoadCustomers(filePath);
-
+            
             Accounts.LoadAccounts(filePath);
+            Orders.LoadOrders(filePath);
             
             
         }
