@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace KMS_Eberhard_Michael
 {
-    internal class Orders
+    public class Orders
     {
-        public static List<Orders>orders=new List<Orders>();
+        public static List<Orders> orders = new List<Orders>();
 
         public Orders(string sender, string recepient, string cause, string amount, string date)
         {
@@ -35,8 +35,6 @@ namespace KMS_Eberhard_Michael
             List<string> allCustomerData = File.ReadAllLines(totalFilePath).Skip(1).ToList();
             sr.Close();
 
-
-
             foreach (string file in allCustomerData)
             {
 
@@ -47,6 +45,4 @@ namespace KMS_Eberhard_Michael
             }
         }
     }
-
-    
 }

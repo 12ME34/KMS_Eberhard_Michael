@@ -5,41 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KMS_Eberhard_Michael"
         mc:Ignorable="d"
-        Title="Details" Height="550" Width="800">
+        Title="Details" Height="580" Width="850" Closing="Window_Closing">
     <Grid>
-        <Label Content="Kontonummer" HorizontalAlignment="Left" Height="40" Margin="127,35,0,0" VerticalAlignment="Top" Width="475"/>
-        <ListView HorizontalAlignment="Left" Height="125" Margin="75,142,0,0" VerticalAlignment="Top" Width="377" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <ListView x:Name="AccountOutgoings" HorizontalAlignment="Left" Height="130" Margin="58,137,0,0" VerticalAlignment="Top" Width="430" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Recipient"/>
-                    <GridViewColumn Header="Purpose"/>
-                    <GridViewColumn Header="Date"/>
-                    <GridViewColumn Header="Amount"/>
+                    <GridViewColumn Header="Recipient" Width="160" DisplayMemberBinding="{Binding Recepient}"/>
+                    <GridViewColumn Header="Purpose" Width="100" DisplayMemberBinding="{Binding Cause}"/>
+                    <GridViewColumn Header="Date" Width="75" DisplayMemberBinding="{Binding Date}"/>
+                    <GridViewColumn Header="Amount" Width="75" DisplayMemberBinding="{Binding Amount}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView HorizontalAlignment="Left" Height="125" Margin="75,362,0,0" VerticalAlignment="Top" Width="377" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <ListView x:Name="AccountReceipts" HorizontalAlignment="Left" Height="130" Margin="58,311,0,0" VerticalAlignment="Top" Width="430">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Sender"/>
-                    <GridViewColumn Header="Purpose"/>
-                    <GridViewColumn Header="Date"/>
-                    <GridViewColumn Header="Amount"/>
+                    <GridViewColumn Header="Sender" Width="160" DisplayMemberBinding="{Binding Sender}"/>
+                    <GridViewColumn Header="Purpose" Width="100" DisplayMemberBinding="{Binding Cause}"/>
+                    <GridViewColumn Header="Date" Width="75" DisplayMemberBinding="{Binding Date}"/>
+                    <GridViewColumn Header="Amount" Width="75" DisplayMemberBinding="{Binding Amount}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Receive" HorizontalAlignment="Left" Height="40" Margin="75,317,0,0" VerticalAlignment="Top" Width="377"/>
-        <Label Content="Send" HorizontalAlignment="Left" Height="43" Margin="75,80,0,0" VerticalAlignment="Top" Width="377"/>
-        <Label Content="Total received" HorizontalAlignment="Left" 
-               Height="36" Margin="541,357,0,0" 
-               VerticalAlignment="Top" Width="198"
-               VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
-        <Label Content="Total send" HorizontalAlignment="Left" 
-               Height="36" Margin="541,393,0,0" VerticalAlignment="Top" 
-               Width="198" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
-        <Label Content="Total" HorizontalAlignment="Left" Height="36" 
-               Margin="541,429,0,0" VerticalAlignment="Top" Width="198"
-               VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <Label x:Name="lblSent" Content="Sent" HorizontalAlignment="Left" Height="27" Margin="58,105,0,0" VerticalAlignment="Top" Width="250" FontSize="15" FontWeight="Bold"/>
+        <Label x:Name="lblReceived" Content="Received" HorizontalAlignment="Left" Height="27" Margin="58,284,0,0" VerticalAlignment="Top" Width="250" FontSize="15" FontWeight="Bold"/>
+        <Label x:Name="lblCalculation" Content="Label" HorizontalAlignment="Left" Height="130" Margin="511,311,0,0" VerticalAlignment="Top" Width="275" FontWeight="Bold" FontSize="15"/>
+        <Button x:Name="btnExport" Content="Export" HorizontalAlignment="Left" Height="35" Margin="511,479,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+        <Button x:Name="btnQuit" Content="Quit" HorizontalAlignment="Left" Height="35" Margin="666,479,0,0" VerticalAlignment="Top" Width="120" Click="btnQuit_Click"/>
+        <Label x:Name="lblDetails" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+               Content="Detailed Account Information" Height="65" Margin="114,3,114,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+
 
     </Grid>
 </Window>

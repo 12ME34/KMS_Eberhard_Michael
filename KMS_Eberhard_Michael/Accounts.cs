@@ -1,15 +1,10 @@
-﻿
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KMS_Eberhard_Michael
 {
-    
-    internal class Accounts
+    public class Accounts
     {
         public static List<Accounts> accounts = new List<Accounts>();
 
@@ -31,7 +26,6 @@ namespace KMS_Eberhard_Michael
             sr.Close();
 
 
-
             foreach (string file in allCustomerData)
             {
 
@@ -40,7 +34,6 @@ namespace KMS_Eberhard_Michael
                 accounts.Add(new Accounts(entries[0], entries[1]));
 
             }
-
         }
 
     }
